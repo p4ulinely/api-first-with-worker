@@ -6,7 +6,6 @@ namespace WebApiComServicoEmBackground.Controllers
     [Route("[controller]")]
     public class HealthCheckController : ControllerBase
     {
-
         private readonly ILogger<HealthCheckController> _logger;
 
         public HealthCheckController(ILogger<HealthCheckController> logger)

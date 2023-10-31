@@ -1,4 +1,5 @@
 using Service;
+using WebApiComServicoEmBackground;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +12,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHostedService<MeuWorker>();
 
-// builder.Services.AddMvcCore(); //se usar o app.MapGet
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,11 +21,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseAuthorization();
 
-// app.MapGet("/", async context => {
-//     await context.Response.WriteAsync("Bem vindo...");
-// });
+app.UseMiddleware<GlobalErrorHandlerMiddleware>();
 
 app.MapControllers();
 
