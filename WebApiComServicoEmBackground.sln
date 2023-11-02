@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiComServicoEmBackgroun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{566EE776-4247-4508-A593-501AA4CF910C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{183ECD99-CD4C-46E7-88E7-DA830B0F957C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{566EE776-4247-4508-A593-501AA4CF910C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{566EE776-4247-4508-A593-501AA4CF910C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{566EE776-4247-4508-A593-501AA4CF910C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183ECD99-CD4C-46E7-88E7-DA830B0F957C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183ECD99-CD4C-46E7-88E7-DA830B0F957C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183ECD99-CD4C-46E7-88E7-DA830B0F957C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183ECD99-CD4C-46E7-88E7-DA830B0F957C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

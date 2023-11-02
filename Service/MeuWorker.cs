@@ -33,19 +33,20 @@ public class MeuWorker : IHostedService
     {
         try
         {
+            // TODO: alterar para o worker ser o receiver do Azure Service Bus 
             Console.WriteLine($"Pulling data from some webservice -> {DateTime.Now}");
 
-            var httpClient = _httpClientFactory.CreateClient("ApiVagas");
-            var response = httpClient.GetAsync("vagas/api/v1/issues").Result;
+            // var httpClient = _httpClientFactory.CreateClient("ApiVagas");
+            // var response = httpClient.GetAsync("vagas/api/v1/issues").Result;
 
-            if (response.IsSuccessStatusCode)
-            {
-                _logger.LogInformation(response.Content.ReadAsStringAsync().Result);
-            }
-            else
-            {
-                _logger.LogInformation(response.StatusCode.ToString());
-            }
+            // if (response.IsSuccessStatusCode)
+            // {
+            //     _logger.LogInformation(response.Content.ReadAsStringAsync().Result);
+            // }
+            // else
+            // {
+            //     _logger.LogInformation(response.StatusCode.ToString());
+            // }
         }
         catch (Exception ex)
         {
