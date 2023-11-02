@@ -7,7 +7,7 @@ namespace Service;
 public class MeuWorker : IHostedService
 {
     private Timer _timer;
-    private readonly string _conectionString;
+    private readonly string _connectionStringDB;
     private readonly IHttpClientFactory _httpClientFactory;
     private readonly ILogger<MeuWorker> _logger;
 
@@ -16,13 +16,14 @@ public class MeuWorker : IHostedService
     {
         _logger = logger;
         _httpClientFactory = httpClient;
+        _connectionStringDB = configuration["AzureCosmosDB:ConnectionString"];
         // _conectionString = configuration.GetConnectionString("SqlPrincipal");
     }
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
         Console.WriteLine("MeuWorker rodou...");
-        Console.WriteLine($"Conectando ao sql: {_conectionString}");
+        Console.WriteLine($"Conectando ao sql: {_connectionStringDB}");
 
         _timer = new Timer(ExecutaAlgo, null, TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(5));
 

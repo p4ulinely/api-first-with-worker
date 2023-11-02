@@ -14,7 +14,7 @@ namespace Domain.Entities
         public DateTime OrderDate { get; protected set; }
 
         public void SetId(Guid id)
-            => Id = Id;
+            => Id = id;
             
         public override void Validacoes()
         {
